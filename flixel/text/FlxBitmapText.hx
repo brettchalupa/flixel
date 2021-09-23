@@ -1855,4 +1855,14 @@ class FlxBitmapText extends FlxSprite
 		return ((Code >= 768 && Code <= 879) || (Code >= 6832 && Code <= 6911) || (Code >= 7616 && Code <= 7679) || (Code >= 8400 && Code <= 8447)
 			|| (Code >= 65056 && Code <= 65071));
 	}
+
+	/**
+	 * Updates the text's hitbox (`width`, `height`, `offset`) according to the current `scale`.
+	 * Also calls `centerOrigin()`.
+	 */
+	public function updateHitbox():Void
+	{
+		computeTextSize();
+		super();
+	}
 }
